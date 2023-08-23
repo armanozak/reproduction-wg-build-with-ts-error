@@ -1,0 +1,12 @@
+query ($cityName: String!) {
+  weather: weather_getCityByName(name: $cityName) @transform(get: "weather") {
+    weather {
+      temperature @transform(get: "actual") {
+        actual
+      }
+      description: summary @transform(get: "description") {
+        description
+      }
+    }
+  }
+}
