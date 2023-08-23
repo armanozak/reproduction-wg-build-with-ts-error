@@ -2,7 +2,6 @@ query ($code: String!) {
   countries_countries(filter: { continent: { eq: $code } }) {
     code
     name
-    capital
     currency
     flag: emoji
     languages {
